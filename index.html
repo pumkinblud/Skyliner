@@ -535,22 +535,22 @@
                 </div>
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-6">Bewerbung</h3>
-                    <form class="glass rounded-xl p-6 space-y-4">
+                    <form action="mailto:skylinerinfo@outlook.de" method="post" enctype="text/plain" class="glass rounded-xl p-6 space-y-4">
                         <div>
                             <label class="block text-airline-silver text-sm mb-2">Vorname</label>
-                            <input type="text" class="w-full bg-airline-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white" placeholder="Max">
+                            <input type="text" name="vorname" class="w-full bg-airline-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white" placeholder="Max" required>
                         </div>
                         <div>
                             <label class="block text-airline-silver text-sm mb-2">Nachname</label>
-                            <input type="text" class="w-full bg-airline-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white" placeholder="Mustermann">
+                            <input type="text" name="nachname" class="w-full bg-airline-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white" placeholder="Mustermann" required>
                         </div>
                         <div>
                             <label class="block text-airline-silver text-sm mb-2">E-Mail</label>
-                            <input type="email" class="w-full bg-airline-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white" placeholder="max@example.com">
+                            <input type="email" name="email" class="w-full bg-airline-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white" placeholder="max@example.com" required>
                         </div>
                         <div>
                             <label class="block text-airline-silver text-sm mb-2">Flugerfahrung (Stunden)</label>
-                            <select class="w-full bg-airline-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white">
+                            <select name="flugerfahrung" class="w-full bg-airline-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white" required>
                                 <option value="">Bitte wählen</option>
                                 <option value="0-50">0-50 Stunden</option>
                                 <option value="50-100">50-100 Stunden</option>
@@ -560,7 +560,7 @@
                         </div>
                         <div>
                             <label class="block text-airline-silver text-sm mb-2">Motivation</label>
-                            <textarea class="w-full bg-airline-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white h-24" placeholder="Warum möchten Sie SkyLiner beitreten?"></textarea>
+                            <textarea name="motivation" class="w-full bg-airline-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white h-24" placeholder="Warum möchten Sie SkyLiner beitreten?" required></textarea>
                         </div>
                         <button type="submit" class="w-full btn-primary py-3 rounded-lg text-white font-semibold">
                             Bewerbung senden
