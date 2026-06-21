@@ -221,6 +221,30 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
+        /* Announcement bar */
+        .announcement-bar {
+            background: linear-gradient(90deg, #5c8aae, #3d5a80, #5c8aae);
+            background-size: 200% 100%;
+            animation: gradientMove 3s ease infinite;
+            overflow: hidden;
+        }
+
+        .announcement-text {
+            animation: scrollText 20s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes scrollText {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -241,8 +265,17 @@
     </style>
 </head>
 <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar py-2">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="announcement-text text-white font-semibold text-sm">
+                ✈️ SKYLINER DEBUT - First SkyLiner flight landed yesterday in EDDM ✈️ Welcome to SkyLiner Virtual Airlines - Fly Beyond Limits ✈️
+            </p>
+        </div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass-dark">
+    <nav class="fixed top-8 left-0 right-0 z-50 glass-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
